@@ -1,8 +1,8 @@
-// CyberCore Terminal Main JavaScript
-// Initializing Connection...
+// Elderwood Chronicle Main JavaScript
+// Initializing page elements...
 
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('[SYSTEM_MSG] Client_Interface Initialized. Standby for data stream.');
+    console.log('[Chronicle_Note] Page scripts initialized. Welcome, reader.');
 
     // Smooth scroll for anchor links (optional enhancement)
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -31,16 +31,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Dynamic text for footer status (example)
     const footerStatus = document.querySelector('footer p:last-child');
-    if (footerStatus && footerStatus.textContent.includes('SYSTEM_STATUS')) {
-        // Could update this with dynamic info, e.g., time
+    if (footerStatus && footerStatus.textContent.includes('Hearth & Home')) {
+        // Could update this with dynamic info, e.g., time or a random quote
         // For now, it's mostly static from HTML
     }
+    // Update copyright year dynamically
+    const copyrightYear = document.querySelector('footer p:first-child');
+    if (copyrightYear && copyrightYear.textContent.includes('Current Year')) {
+        copyrightYear.textContent = copyrightYear.textContent.replace('Current Year', new Date().getFullYear());
+    }
 
-    console.log('[SYSTEM_MSG] DOM traversal complete. All systems nominal.');
+
+    console.log('[Chronicle_Note] Page loaded successfully. All elements appear to be in order.');
 });
 
 // Further client-side enhancements can be added here.
-// Example: Light cursor trail, text animation on hover, etc.
-// Keep it lightweight for a template.
+// Example: Lazy loading images, simple animations on scroll, etc.
+// Keep it relatively simple for a rustic feel.
 
-console.log('[SYSTEM_MSG] Mainframe connection stable. Listening for directives...');
+console.log('[Chronicle_Note] Scripts standing by. Enjoy your reading.');
